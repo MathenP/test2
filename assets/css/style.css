@@ -1,0 +1,332 @@
+/* ----------------------------------------General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    color: #eef0f3;
+}
+
+#team, #the-forge, #prices, #signup, #schedule, #confirm-msg  {
+    background-color:#0f0f0f;
+    margin-bottom: 0;
+}
+
+/* borrowed the divider from this site https://blog.avada.io/css/dividers/ and customized it */
+
+.divider-fg {
+  height: 2px;
+  width: 40%;
+  background: linear-gradient(90deg, hsl(0, 1%, 25%), hsl(0, 6%, 90%), hsl(0, 0%, 37%));
+}
+
+.divider-bg {
+  padding: 70px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  background: #0f0f0f;
+}
+
+.section-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 50px 0 40px 0;
+}
+
+.text-link-style {
+   font-weight: bold;
+   font-style: oblique;
+   color: #056b9b;
+}
+
+.text-link-style:hover {
+   color: #056b9b;
+}
+
+/* ----------------------------------------Header */
+
+.navbar .navbar-nav .nav-link {
+    text-transform: uppercase;
+    color: #eef0f3;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.navbar .navbar-toggler {
+    border-color: #eef0f3;
+}
+
+/* change the toggle icon color with the help of the customized fontawesome icon;
+that solution was taken 
+from stackoverflow https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color
+*/
+
+.navbar .navbar-toggler-icon i{
+   color:#eef0f3; 
+   font-size:29px;
+}
+
+.navbar .navbar-nav .nav-item a:hover {
+    color: #eef0f3;
+}
+
+.navbar-brand {
+    height:50px;
+    width:140px;
+}
+
+/* ----------------------------------------Home Page Image */
+
+.jumbotron {
+
+    background: url('../images/main-image.jpg') no-repeat  center center;
+    background-size: cover;
+    opacity: 0.9;
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+/* Media queries for the jumbotron header: */
+
+/* extra small and small devices */
+@media only screen and (min-width: 0px) {
+    .jumbotron h6 {
+    font-size: medium;
+    }
+}
+
+/* medium, large and extra large devices (up to 2560px) */
+@media only screen and (min-width: 768px) {
+    .jumbotron h6 {
+    font-size: large;
+    }
+}
+
+/* extra large devices (2560px and up) */
+@media only screen and (min-width: 2560px) {
+            .jumbotron h6 {
+    font-size:x-large;
+    text-align: right;
+    }
+}
+
+/* ----------------------------------------About Us Section */
+
+#team p {
+    text-align: justify;
+    margin: 0;
+}
+
+/* ----------------------------------------Gym Offers Section */
+
+#the-forge .media img {
+    height:250px;
+    width:350px;
+    align-content: center;
+}
+
+#the-forge .media-body h5 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom:20px;
+    
+}
+
+#the-forge .media-body p {
+    text-align: justify;   
+}
+
+#the-forge .btn {
+    background-color: #f8cd4a;
+    color:black;
+    border: thin solid #ffc000;
+    font-weight: bold;
+    font-size: large;
+}
+#the-forge .btn:hover {
+    background-color: #ca9903;
+    border: thin solid #ca9903;
+}
+
+#the-forge .btn:focus {
+    background-color: #ca9903;
+    border: thin solid #ca9903;
+    box-shadow: none;
+}
+
+/* ----------------------------------------Membership Options Section */
+
+#prices .card {
+    color: black;
+    background-color: white;
+    border-color: #ffc000;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 10px;
+}
+
+#prices .card .card-header h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#prices .card-body .card-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#prices p {
+    padding: 0 20px;
+}
+
+#prices .card-body p::before {
+  content: "\2713";
+  color: #ffc000;
+  font-weight: bolder;
+  display: inline-block; 
+  font-size: 130%;
+}
+
+/* ----------------------------------------Sign Up Form */
+
+form {
+    padding-bottom: 70px;
+}
+
+#signup p {
+    font-size: large;
+}
+
+/* override the default bootstrap border styling when form field is selected */
+.form-control:focus {
+    border-color: #6595ac;
+    box-shadow: 0 0 0 2.5px #6595ac;
+    
+}
+
+form label {
+    font-weight: 500;
+    font-size: medium;
+}
+
+/* capitalize all options in the Options dropdown except the disabled one */
+form option:not([disabled]) {
+    text-transform: capitalize;
+}
+
+form .btn {
+    background-color: #79ad24;
+    font-size: large;
+}
+
+/* set darker button color when hovering */
+form .btn:hover {
+    background-color: #5e8d05;
+}
+
+/* remove the default grey color when Submit button is clicked */
+form .btn:focus {
+    background-color: #365768;
+    box-shadow: none;
+}
+
+/* remove the underline */
+form a:hover {
+    text-decoration: none;    
+}
+
+
+/* ----------------------------------------Footer */
+
+#footer-details {
+    background-color: #0f0f0f;
+    color: #F5F5F5;
+    font-size: 14px;
+}
+
+#footer-details h5 {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 20px;
+    color: #979595;
+} 
+
+#social-media i {
+    padding: 5%;
+    font-size: 230%;
+    color: #F5F5F5;
+}
+
+#copyright-info p {
+    margin-bottom: 0;
+    padding: 20px 0 5px 0;
+    font-size: 0.75rem;
+    font-style: oblique;
+    
+}
+
+/* fix for blue color display on Iphone device */
+#phone-number a {
+    color:#F5F5F5;
+    text-decoration:none;
+}
+
+/* ----------------------------------------schedule Page*/
+
+#schedule .container {
+    padding-bottom: 100px;
+}
+
+.table {
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+}
+
+.table thead th {
+    background-color: #000000;  
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
+.table tbody th {
+     background-color: #000000;
+     white-space: nowrap;
+     vertical-align: middle;
+     font-size: smaller;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    font-size: smaller;
+}
+
+/* ----------------------------------------schedule Printing */
+@media print {
+  #schedule .container {
+    width: auto;
+  }
+   .navbar { 
+   display: none; 
+  }
+}
+
+/* ----------------------------------------Thank you Page*/
+
+#confirm-msg {
+    color: black;
+    height: 100vh;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#confirm-msg .btn {
+    background-color: #3F6F86;
+}
+
+#confirm-msg .btn:hover {
+    background-color: #365768;
+}
